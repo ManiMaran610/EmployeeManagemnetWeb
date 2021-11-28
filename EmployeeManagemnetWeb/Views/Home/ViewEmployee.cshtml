@@ -1,0 +1,34 @@
+﻿@model IEnumerable<EmployeeManagemnetWeb.Models.Employee>
+@{
+    ViewBag.Title = "ViewEmployee";
+}
+
+<h2>ViewEmployee</h2>
+
+<table class="table table-striped table-bordered " style="border:thick;">
+    <tr style="height:auto">
+        <th><b>@Html.DisplayNameFor(item => item.EmployeeID)</b></th>
+        <th><b>@Html.DisplayNameFor(item => item.Name)</b></th>
+        <td><b>@Html.DisplayNameFor(item => item.DateOfBirth)</b></td>
+        <td><b>@Html.DisplayNameFor(item => item.DateOfJoining)</b></td>
+        <td><b>@Html.DisplayNameFor(item => item.MobileNo)</b></td>
+        <td><b>@Html.DisplayNameFor(item => item.Email)</b></td>
+        <td><b>Edit/Delete</b></td>
+    </tr>
+
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@data.EmployeeID</td>
+            <td>@data.Name</td>
+            <td>@data.DateOfBirth.Date</td>
+            <td>@data.DateOfJoining</td>
+            <td>@data.Email</td>
+            <td>@data.MobileNo</td>
+            
+            <td><a class="btn btn-default btn-sm" style="margin-right:5px" href=@Url.Action("EditEmployee", "home",data)>Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
+        </tr>
+    }
+
+
+</table>
