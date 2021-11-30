@@ -1,12 +1,24 @@
 ﻿@model EmployeeManagemnetWeb.Models.Employee
 @{
     ViewBag.Title = "AddtoDb";
+    ViewBag.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
 }
 
-<h2>AddtoDb</h2>
+<div style="margin-bottom:300px">
+    <center>
+        <script src=@ViewBag.src></script>
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_jz2wa00k.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></lottie-player>
+        <h1 class="display-4 text-success" s>Successfully added to the database</h1>
+
+        <br />
+        <a  class="btn btn-success" href="@Url.Action("index")">Back to Main Menu</a>
+       <a class="btn btn-warning" href="@Url.Action("ViewEmployee")">View Employees</a>
+    </center>
+</div>
+@*<h2>AddtoDb</h2>
 <h1>@Model.Name</h1>
 <h1>@Model.MobileNo</h1>
 <h1>@Model.DateOfBirth</h1>
 <h1>@Model.DateOfJoining</h1>
 <h1>@Model.Email</h1>
-<h1>@Model.EmployeeID</h1>
+<h1>@Model.EmployeeID</h1>*@

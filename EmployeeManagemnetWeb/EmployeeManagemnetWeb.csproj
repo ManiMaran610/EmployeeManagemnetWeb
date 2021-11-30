@@ -177,6 +177,8 @@
     <Content Include="Views\Home\ViewEmployee.cshtml" />
     <Content Include="Views\Home\AddtoDb.cshtml" />
     <Content Include="Views\Home\EditEmployee.cshtml" />
+    <Content Include="Views\Home\EditToDb.cshtml" />
+    <Content Include="Views\Home\OnSuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

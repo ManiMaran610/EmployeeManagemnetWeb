@@ -16,6 +16,7 @@
         <td><b>Edit/Delete</b></td>
     </tr>
 
+    
     @foreach (var data in Model)
     {
         <tr>
@@ -26,9 +27,11 @@
             <td>@data.Email</td>
             <td>@data.MobileNo</td>
             
-            <td><a class="btn btn-default btn-sm" style="margin-right:5px" href=@Url.Action("EditEmployee", "home",data)>Edit</a><a class="btn btn-danger btn-sm">Delete</a></td>
+            <td><a class="btn btn-default btn-sm" style="margin-right:5px" href=@Url.Action("EditEmployee", "home",data)>Edit</a>
+            <a class="btn btn-danger btn-sm" href=@Url.Action("DeleteEmployee", "home",data)>Delete</a></td>
         </tr>
     }
 
 
 </table>
+
